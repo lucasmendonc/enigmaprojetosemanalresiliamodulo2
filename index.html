@@ -11,7 +11,7 @@
 <body>
     <header>
         <h1>enigma</h1>
-        <p>Códificando e Descodificando em Cifra César e Base64</p>
+        <p>Codificando e Decodificando em Cifra César e Base64</p>
 
     </header>
     
@@ -19,37 +19,46 @@
     <main>
       
         <div class="toform" >
-         
-            <form> 
+        
+             <form>
+                <label for = 'entradaMensagem'></label>
+                <input type="text" name="entradaMensagem" id="entradaTexto" placeholder="Escreva aqui"> <br>
+        
+                <select id='opçoes'>
+                    <option value="EscolhaAqui">Escolha </option>
+                    <option value="cifraDeCesar">Cifra de Cesar</option>
+                    <option value="base64">Base 64</option>
+                </select>
+        
                 
-                <di class="codigo1">
-                                            
-                    <label><strong> Insira o texto:</strong></label><br><textarea class="msg" cols="40" rows="8"></textarea>
-                    <label><strong> Codificado:</strong></label><textarea class="msg" cols="40" rows="8"></textarea>                          
+                        <input type="number" id="incremento" placeholder="Escolha um número"><br>
                 
-  
-                    <div class="codigo2">
-                        <div class="cod1">
-                            <input type="checkbox" >
-                            <label for="cesar"><strong>Cifra César</strong></label>  
-                        </div> 
-                           <br>
-                        <div class="cod2">
-                            <input type="checkbox" >
-                            <label for="base64"><strong>base64</strong></label><br>
-                        </div>   
-                       
-                    </div>                          
-                              
-                                
-                </di>                 
-                    <button class="enigmab1"><strong>Recodifica</strong>r</button>   
-                    <button class="enigmab2"><strong>Decodificar</strong></button>  
+                <div class='radio'>
+                    <input type="radio"  name='radio-Cesar' value="codificar" >
+                    <label for = 'codificar' id='labelcodificar'><strong>Codificar</strong>  </label> <br>
+        
+                    <br>
+        
+                    <input type="radio" id='decodificar' name='radio-Cesar' value="decodificar">
+                    <label for = 'codificar' id='labeldecodificar'> <strong>Decodificar</strong>  </label> <br>
+                </div>
+        
+                <div>
+                    <p class="saidaMensagem"></p>
+                </div>
+        
+                <input type="submit" value="Codificar" id="enigmab1">
+                <input type="submit" value="Decodificar" id="enigmab2">
+                
+                
+               
             </form>
-            
+      
          </div>
-         
+       
     </main>
+    <footer>Criado por Lucas Mendonça </footer>
     <script src="enigma.js"></script>
 </body>
+
 </html>
